@@ -5,6 +5,6 @@ export default function Page() {
   return (
     <>
       <h1>Posts</h1>
-      {posts.map((post) => <Post key={post.id} {...post} />)} 
+      {posts.map((post) => <Post key={post.id} {...post} />)}
     </>)
 }
