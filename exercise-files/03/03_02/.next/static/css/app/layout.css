@@ -705,6 +705,9 @@ h3 {
 .h-px {
   height: 1px;
 }
+.h-screen {
+  height: 100vh;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -732,8 +735,14 @@ h3 {
 .min-w-\[8rem\] {
   min-width: 8rem;
 }
+.flex-none {
+  flex: none;
+}
 .shrink-0 {
   flex-shrink: 0;
+}
+.flex-grow {
+  flex-grow: 1;
 }
 .grow {
   flex-grow: 1;
@@ -1033,12 +1042,20 @@ body {
     width: auto;
   }
 
+  .md\:w-64 {
+    width: 16rem;
+  }
+
   .md\:flex-none {
     flex: none;
   }
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
   }
 
   .md\:flex-col {
@@ -1061,8 +1078,20 @@ body {
     margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
   }
 
+  .md\:overflow-hidden {
+    overflow: hidden;
+  }
+
+  .md\:overflow-y-auto {
+    overflow-y: auto;
+  }
+
   .md\:p-2 {
     padding: 0.5rem;
+  }
+
+  .md\:p-12 {
+    padding: 3rem;
   }
 
   .md\:px-2 {
