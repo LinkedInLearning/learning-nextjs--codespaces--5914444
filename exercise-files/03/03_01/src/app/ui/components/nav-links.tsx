@@ -13,13 +13,13 @@ import Link from 'next/link';
 import clsx from 'clsx';
 
 const links = [
-  { name: 'Home', href: '/', icon: HomeIcon  },
+  { name: 'Home', href: '/', icon: HomeIcon },
   {
     name: 'Posts',
     href: '/blog/posts',
     icon: DocumentDuplicateIcon,
   },
-  { name: 'About', href: '/blog/about', icon: UserGroupIcon},
+  { name: 'About', href: '/blog/about', icon: UserGroupIcon },
   { name: 'Contact', href: '/blog/contact', icon: EnvelopeIcon },
 ];
 
@@ -35,7 +35,7 @@ export default async function NavLinks() {
             href={link.href}
             className="'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-purple-100 md:flex-none md:justify-start md:p-2 md:px-3'"
           >
-            <LinkIcon className="w-6" />
+            {/* <LinkIcon className="w-6" /> */}
             <p className="hidden md:block">{link.name}</p>
           </Link>
         );
