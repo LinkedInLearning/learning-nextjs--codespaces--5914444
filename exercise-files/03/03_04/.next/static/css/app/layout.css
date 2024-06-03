@@ -768,9 +768,6 @@ h3 {
 .justify-center {
   justify-content: center;
 }
-.justify-between {
-  justify-content: space-between;
-}
 .gap-2 {
   gap: 0.5rem;
 }
@@ -822,13 +819,13 @@ h3 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
-.bg-purple-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 33 168 / var(--tw-bg-opacity));
-}
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-purple-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 232 255 / var(--tw-bg-opacity));
 }
 .fill-current {
   fill: currentColor;
@@ -883,10 +880,6 @@ h3 {
 .pr-2 {
   padding-right: 0.5rem;
 }
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -898,9 +891,6 @@ h3 {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-.font-bold {
-  font-weight: 700;
 }
 .font-medium {
   font-weight: 500;
@@ -1042,12 +1032,12 @@ body {
     display: block;
   }
 
-  .md\:w-auto {
-    width: auto;
-  }
-
   .md\:w-64 {
     width: 16rem;
+  }
+
+  .md\:w-auto {
+    width: auto;
   }
 
   .md\:flex-none {
@@ -1090,12 +1080,12 @@ body {
     overflow-y: auto;
   }
 
-  .md\:p-2 {
-    padding: 0.5rem;
-  }
-
   .md\:p-12 {
     padding: 3rem;
+  }
+
+  .md\:p-2 {
+    padding: 0.5rem;
   }
 
   .md\:px-2 {
