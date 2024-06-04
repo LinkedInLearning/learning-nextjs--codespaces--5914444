@@ -635,9 +635,6 @@ h3 {
 .z-0 {
   z-index: 0;
 }
-.z-10 {
-  z-index: 10;
-}
 .z-50 {
   z-index: 50;
 }
@@ -662,9 +659,6 @@ h3 {
 }
 .ml-auto {
   margin-left: auto;
-}
-.block {
-  display: block;
 }
 .flex {
   display: flex;
@@ -904,6 +898,9 @@ h3 {
 .font-semibold {
   font-weight: 600;
 }
+.italic {
+  font-style: italic;
+}
 .tracking-widest {
   letter-spacing: 0.1em;
 }
@@ -974,12 +971,10 @@ h3 {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-style: italic;
 }
 
 .hover\:bg-purple-100:hover {
@@ -1036,10 +1031,6 @@ body {
 
   .md\:block {
     display: block;
-  }
-
-  .md\:hidden {
-    display: none;
   }
 
   .md\:w-64 {
@@ -1108,4 +1099,3 @@ body {
     padding-right: 0.75rem;
   }
 }
-
