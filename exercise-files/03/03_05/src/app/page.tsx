@@ -17,6 +17,13 @@ export default function Home() {
           </div>
           <div className="relative flex justify-center items-center">
             {/* Image */}
+            <Image
+              src="/image-desktop.png"
+              width={1000}
+              height={760}
+              className="hidden md:block z-10"
+              alt="Screenshots of the dashboard project showing desktop version"
+            />
           </div>
         </div>
       </div>
