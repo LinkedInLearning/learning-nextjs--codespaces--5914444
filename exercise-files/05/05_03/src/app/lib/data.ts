@@ -15,3 +15,13 @@ export async function connectToDB() {
   }
 }
 
+export async function getPosts() {
+  try {
+    const data = await sql`SELECT * FROM posts LIMIT 2`
+    // console.log(data.rows)
+    return data.rows;
+  } catch (error) {
+    console.error('Error getting posts', error);
+  }
+}
+
