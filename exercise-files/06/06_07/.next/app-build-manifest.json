@@ -31,11 +31,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/blog/post/[id]/page.js"
     ],
-    "/page": [
+    "/blog/post/[id]/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
+      "static/chunks/app/blog/post/[id]/not-found.js"
     ]
   }
 }
