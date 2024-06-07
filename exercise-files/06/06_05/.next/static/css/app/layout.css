@@ -806,6 +806,9 @@ h3 {
 .mt-2 {
   margin-top: 0.5rem;
 }
+.mt-4 {
+  margin-top: 1rem;
+}
 .block {
   display: block;
 }
@@ -983,6 +986,10 @@ h3 {
   --tw-bg-opacity: 1;
   background-color: rgb(96 165 250 / var(--tw-bg-opacity));
 }
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -1061,6 +1068,9 @@ h3 {
 }
 .pr-2 {
   padding-right: 0.5rem;
+}
+.text-center {
+  text-align: center;
 }
 .text-2xl {
   font-size: 1.5rem;
@@ -1219,6 +1229,11 @@ body {
 .before\:to-transparent::before {
   content: var(--tw-content);
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
+}
+
+.hover\:bg-blue-400:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-emerald-500:hover {
