@@ -41,10 +41,10 @@ export default async function UserButton() {
           <DropdownMenuLabel className="font-normal">
             <div className="flex flex-col space-y-1">
               <p className="text-sm font-medium leading-none">
-                {/* user's name */}
+                {session.user.name}
               </p>
               <p className="text-xs leading-none text-muted-foreground">
-                {/* user's email */}
+                {session.user.email}
               </p>
             </div>
           </DropdownMenuLabel>
