@@ -5,7 +5,7 @@ import { connectToDB, getPosts } from '@/app/lib/data';
 
 export default async function Page({ params }: { params: { id: string } }) {
   const posts = await getPosts();
-  const post = posts?.find((post) => post.id === ""); // empty string will never match any post (to test 404 errors)
+  const post = posts?.find((post) => post.id === params.id); // empty string will never match any post (to test 404 errors)
 
   if (!post) {
     notFound();

@@ -17,11 +17,11 @@ export async function POST(request: Request) {
   const title = searchParams.get('title');
   const content = searchParams.get('content');
   const date = searchParams.get('date');
-  // user
+  const author = searchParams.get('author');
 
   try {
     // SQL query to insert a new post
-    await sql`INSERT INTO posts (id, author, title, content, date) VALUES (${id}, 'sandra l', ${title}, ${content}, ${date});`;
+    await sql`INSERT INTO posts (id, author, title, content, date) VALUES (${id}, ${author}, ${title}, ${content}, ${date});`;
     return NextResponse.json({ message: 'Post successfully inserted' }, { status: 200 });
   } catch (error) {
     return NextResponse.json({ error }, { status: 500 });
