@@ -1,14 +1,10 @@
 {
   "pages": {
-    "/blog/post/insert/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/blog/post/insert/page.js"
-    ],
-    "/blog/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/blog/layout.js"
+      "static/css/app/page.css",
+      "static/chunks/app/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -31,11 +27,30 @@
       "static/chunks/main-app.js",
       "static/chunks/app/blog/posts/loading.js"
     ],
-    "/page": [
+    "/blog/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
+      "static/chunks/app/blog/layout.js"
+    ],
+    "/blog/about/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/blog/about/page.js"
+    ],
+    "/blog/contact/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/blog/contact/page.js"
+    ],
+    "/blog/post/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/blog/post/[id]/page.js"
+    ],
+    "/blog/post/[id]/not-found": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/blog/post/[id]/not-found.js"
     ]
   }
 }
