@@ -47,7 +47,29 @@ export default function Page() {
     }).catch(console.error)
   }
 
-  const generateContent = () => { }
+  const generateContent = () => {
+    setGenerating(true);
+    if (!formData?.title) { return false }
+    const requestParams = {
+      model: "gpt-3.5-turbo",
+      messages: [{ "role": "system", "content": PROMPT + formData?.title },
+      { "role": "user", "content": formData?.title },]
+
+    }
+    fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`
+      },
+      body: JSON.stringify(requestParams)
+    }).then(response => response.json())
+      .then(data => {
+        setContent(data.choices[0].message.content);
+        console.log(data.choices[0].message.content);
+        setGenerating(false);
+      }).catch(console.error);
+  }
 
   useEffect(() => {
     console.log("API KEY", process.env.OPENAI_API_KEY)
@@ -72,7 +94,7 @@ export default function Page() {
           <label htmlFor="content" className="block font-medium">Content:</label>
           <textarea id="content" name="content" rows="4" value={formData.content} onChange={handleChange} className="w-full border-2 border-purple-100 p-2 rounded-md focus:border-purple-200 focus:outline-none"></textarea>
           {generating && <p className='text-purple-700 my-1'>Generating content...</p>}
-          <button onClick={generateContent} className="bg-blue-400 text-white px-4 py-2 rounded-md bg-purple-600  hover:bg-purple-700">Generate Content</button>
+          <button onClick={generateContent} type="button" className="bg-blue-400 text-white px-4 py-2 rounded-md bg-purple-600  hover:bg-purple-700">Generate Content</button>
         </div>
         <div>
           <label htmlFor="date" className="block font-medium">Date:</label>
